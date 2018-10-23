@@ -16,13 +16,13 @@ public class FastestRunner {
         int fastest_time = 0;
         int second_time  = -1;
 
-        for (int i = 0; i < numRunners; i++) {
+        for ( int i = 0; i < numRunners; i++ ) {
 
             //Check if faster than second runner
-            if ( times[i] > second_time ){
+            if ( times [ i ] > second_time ){
 
                 //If faster than second runner then save as fastest runner
-                if (times[i] > fastest_time){
+                if ( times [ i ] > fastest_time ){
 
                     fastest_time  = times [ i ];
                     fastestRunner = names [ i ];
@@ -33,7 +33,7 @@ public class FastestRunner {
                     secondRunner = names [ i ];
                 }
             }
-            System.out.println(names[i] + ": " + times[i]);
+            System.out.println( names [ i ] + ": " + times [ i ]) ;
 
         }
         System.out.println( "\nFastest Runner: " + fastestRunner + "\nWith time of (min): " + fastest_time);
