@@ -8,7 +8,7 @@ public class Tutor {
         //Intro
         System.out.println( "This program will help you practice math problems. Pick what type of math problem to " +
                             "practice\n" );
-        int i = 0; //Initialize loop
+        int i = 0; //Initialize while loop
         while ( i == 0 ){
 
             System.out.println( "\n\tMenu\n1: ADDITION\n2: SUBTRACTION\n3: MULTIPLICATION\n4: DIVISION\n0: QUIT\n" );
@@ -17,7 +17,7 @@ public class Tutor {
             Scanner input = new Scanner (System.in);
             int mathType = input.nextInt();
 
-            //Create random numbers for future calculations
+            //Create random numbers to create the math problem
             Random rand = new Random();
             int maxRandNum = rand.nextInt (( 10 - 1 ) + 1 ) + 1;
             int minRandNum = rand.nextInt (( maxRandNum - 1 ) + 1 ) + 1;
@@ -28,20 +28,21 @@ public class Tutor {
             switch ( mathType ){
 
                 //Quit option selected, terminate program
-                case 0: System.out.println( "You just quit the pogram!" );
-                    i++; break;
+                case 0: System.out.println( "You just quit the pogram!" ); i++; break;
 
+                //Addition method is selected
                 case 1: addition ( maxRandNum, minRandNum, attempts ); break;
 
+                //Subtraction method is selected
                 case 2: subtraction ( maxRandNum, minRandNum, attempts ); break;
 
-            //Mu
+                //Multiplication method is selected
                 case 3: multiplication ( maxRandNum, minRandNum, attempts ); break;
 
                 //Division method is selected
                 case 4: division ( maxRandNum, minRandNum, attempts ); break;
 
-                //Else anything else besides 0-4 was input
+                //In case any #, besides 0 to 4, is input
                 default:
                     System.out.println( "Error! Please check input & try again" );
             }
