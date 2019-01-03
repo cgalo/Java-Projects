@@ -95,7 +95,7 @@ public class Tutor {
     public static void division ( int max, int min, int attempts ){
 
         //Intro to division method
-        System.out.println( "You selected to practice multiplication, you have two tries!\n" );
+        System.out.println( "You selected to practice division, you have two tries!\n" );
 
         //Correct answer
         int corrAns = max / min;
